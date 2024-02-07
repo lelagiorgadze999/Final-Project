@@ -1,0 +1,435 @@
+header {
+  padding: 33px 0;
+  background-color: #1c1e53;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, center);
+    nav {
+      @include myflex(row, space-between, center);
+      gap: 48px;
+
+      ul {
+        @include myflex(row, space-between, center);
+        gap: 32px;
+        @media (max-width: 980px) {
+          display: none;
+        }
+        li {
+          a {
+            @include mytheme(#bbbbcb, 16px, 500, 28px);
+          }
+        }
+      }
+      button {
+        border-radius: 41px;
+        border: 2px solid rgba(244, 246, 252, 0.2);
+        background-color: #1c1e53;
+        padding: 16px 48px;
+        @include mytheme(#ffffff, 16px, 500, 28px);
+
+        @media (max-width: 980px) {
+          display: none;
+        }
+      }
+      i {
+        display: none;
+        @media (max-width: 980px) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+.s-1 {
+  padding-top: 110px;
+  padding-bottom: 128px;
+  background-color: #1c1e53;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, center);
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .text-div {
+      width: 480px;
+      @media (max-width: 1250px) {
+        // width: 638px;
+        width: 90%;
+      }
+      @media (max-width: 1100px) {
+        @include myflex(column, center, center);
+      }
+
+      h1 {
+        @include mytheme(#ffffff, 54px, 600, 74px);
+        margin-bottom: 24px;
+        @media (max-width: 1100px) {
+          font-size: 40px;
+          line-height: 50px;
+        }
+        @media (max-width: 670px) {
+          font-size: 30px;
+        }
+      }
+      p {
+        @include mytheme(#fff, 16px, 400, 28px);
+        margin-bottom: 48px;
+        opacity: 0.7;
+      }
+      .btn-a {
+        @include myflex(row, space-between, center);
+        width: 408px;
+        @media (max-width: 1100px) {
+          justify-content: space-between;
+        }
+        @media (max-width: 480px) {
+          flex-direction: column;
+          width: 100%;
+          gap: 20px;
+        }
+      }
+      button {
+        padding: 16px 56px;
+        border-radius: 41px;
+        background: #fcd980;
+        border: none;
+        @include mytheme(#1b1c2b, 18px, 600, 32px);
+        font-family: "Manrope", sans-serif;
+        @media (max-width: 330px) {
+          padding: 10px 25px;
+          width: 100%;
+        }
+      }
+      a {
+        @include mytheme(#ffffff, 16px, 500, 28px);
+      }
+    }
+
+    img {
+      @media (max-width: 670px) {
+        width: 90%;
+      }
+    }
+  }
+}
+.s-2 {
+  padding-top: 128px;
+  padding-bottom: 129px;
+  background-color: #f4f6fc;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, flex-start, flex-start);
+    gap: 270px;
+    @media (max-width: 1250px) {
+      gap: 50px;
+    }
+    @media (max-width: 980px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: 1130px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .work-card {
+      width: 300px;
+      @include myflex(column, center, flex-start);
+      gap: 16px;
+      @media (max-width: 330px) {
+        width: 90%;
+      }
+
+      @media (max-width: 1130px) {
+        align-items: center;
+      }
+      h2 {
+        @include mytheme(#282938, 48px, 600, 64px);
+        text-wrap: nowrap;
+        @media (max-width: 330px) {
+          font-size: 30px;
+        }
+      }
+      p {
+        @include mytheme(#282938, 16px, 400, 28px);
+        opacity: 0.7;
+        width: 350px;
+        @media (max-width: 1130px) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .link-btn {
+        @include myflex(row, flex-start, center);
+        gap: 15px;
+        a {
+          @include mytheme(#2405f2, 18px, 400, 32px);
+        }
+      }
+    }
+    .card-box {
+      @include myflex(row, flex-start, center);
+      flex-wrap: wrap;
+      gap: 48px 30px;
+      // width: 628px;
+      @media (max-width: 1130px) {
+        justify-content: space-evenly;
+      }
+
+      .small-card {
+        width: 250px;
+        @media (max-width: 580px) {
+          text-align: center;
+          width: 100%;
+        }
+        @media (max-width: 330px) {
+          // width: 90%;
+        }
+        .img-box {
+          display: inline-block;
+          position: relative;
+          margin-bottom: 16px;
+          img {
+            background-color: #2405f2;
+            border-radius: 8px;
+          }
+          .number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include mytheme(#ffffff, 18px, 500, 32px);
+          }
+        }
+        h4 {
+          @include mytheme(#282938, 32px, 500, 48px);
+        }
+        p {
+          @include mytheme(#282938, 16px, 400, 28px);
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+.s-3 {
+  padding: 128px 0;
+  background-color: white;
+  .container {
+    @extend %responsivecontainer;
+    @media (max-width: 1000px) {
+      @include myflex(column, center, center);
+    }
+    .header-work {
+      @include myflex(row, space-between, center);
+      width: 100%;
+      @media (max-width: 1300px) {
+        justify-content: space-around;
+      }
+      @media (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      h2 {
+        @include mytheme(#282938, 48px, 600, 64px);
+        @media (max-width: 860px) {
+          font-size: 33px;
+          line-height: 35px;
+        }
+        @media (max-width: 435px) {
+          font-size: 20px;
+        }
+      }
+      a {
+        @include mytheme(#282938, 16px, 500, 28px);
+        margin-right: 16px;
+      }
+      margin-bottom: 64px;
+    }
+    .responsive-images {
+      @include myflex(row, space-between, center);
+      @media (max-width: 1300px) {
+        flex-direction: column;
+        gap: 32px;
+      }
+    }
+
+    .overlay-box {
+      position: relative;
+      display: inline-block;
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        width: 50%;
+        height: 100%;
+        @include myflex(column, flex-end, flex-start);
+
+        background: linear-gradient(
+          329deg,
+          #1c1e53 -10.96%,
+          rgba(28, 30, 83, 0.42) 103.96%
+        );
+        .text {
+          position: relative;
+          left: 5%;
+          top: -10%;
+          width: 280px;
+          @media (max-width: 450px) {
+            width: 90%;
+          }
+        }
+        h3 {
+          @include mytheme(white, 24px, 600, 36px);
+          margin-bottom: 16px;
+          @media (max-width: 450px) {
+            font-size: 15px;
+            line-height: 15px;
+          }
+        }
+        p {
+          @include mytheme(white, 16px, 400, 28px);
+          opacity: 0.8;
+          margin-bottom: 40px;
+          @media (max-width: 450px) {
+            display: none;
+          }
+        }
+        a {
+          margin-right: 16px;
+          @include mytheme(#fcd980, 16px, 500, 28px);
+        }
+        @media (max-width: 860px) {
+          width: 90%;
+        }
+      }
+      .project-human {
+        @media (max-width: 860px) {
+          width: 90%;
+        }
+      }
+    }
+    // second layer
+    .portfolio {
+      position: relative;
+
+      .portfolio-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 6px;
+        background: linear-gradient(
+          329deg,
+          #1c1e53 -10.96%,
+          rgba(28, 30, 83, 0.42) 103.96%
+        );
+        h3 {
+          @include mytheme(white, 24px, 600, 36px);
+          margin-bottom: 10px;
+          @media (max-width: 450px) {
+            font-size: 15px;
+          }
+        }
+        a {
+          margin-right: 16px;
+          @include mytheme(#fcd980, 16px, 500, 28px);
+          @media (max-width: 450px) {
+            font-size: 12px;
+          }
+        }
+        .text2 {
+          position: relative;
+          left: 5%;
+          top: 50%;
+          width: 200px;
+          @media (max-width: 450px) {
+            width: 90%;
+          }
+        }
+      }
+      // responsive img with overlay
+      .portfolio-overlay,
+      .portfolio {
+        @media (max-width: 450px) {
+          width: 90%;
+        }
+      }
+    }
+    .prayer {
+      @media (max-width: 450px) {
+        width: 90%;
+      }
+    }
+    .right-images {
+      @include myflex(column, center, center);
+      gap: 32px;
+      @media (max-width: 1300px) {
+        flex-direction: row;
+      }
+      @media (max-width: 880px) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+.s-4 {
+  background-color: #f4f6fc;
+  padding: 128px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, center, center);
+    h6 {
+      @include mytheme(#282938, 16px, 500, 28px);
+    }
+    h2 {
+      @include mytheme(#282938, 18px, 600, 64px);
+      margin-bottom: 47px;
+      @media (max-width: 500px) {
+        line-height: 35px;
+        text-align: center;
+      }
+    }
+    .mycards {
+      @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+      gap: 32px 24px;
+      @media (max-width: 1300px) {
+        justify-content: space-around;
+      }
+      div {
+        background-color: #fff;
+        border-radius: 10px;
+        // padding: 58px, 32px, 48px, 48px; არ ამუშავდა
+        padding-top: 58px;
+        padding-right: 35px;
+        padding-bottom: 48px;
+        padding-left: 48px;
+        width: 405px;
+        @media (max-width: 930px) {
+          width: 100%;
+          @include myflex(column, space-between, center);
+
+          text-align: center;
+        }
+        @media (max-width: 440px) {
+          padding: 10px;
+        }
+        svg {
+          margin-bottom: 22px;
+        }
+        h3 {
+          @include mytheme(#282938, 24px, 400, 36px);
+          margin-bottom: 12px;
+        }
+        p {
+          @include mytheme(#282938, 16px, 400, 28px);
+        }
+      }
+    }
+  }
+}
