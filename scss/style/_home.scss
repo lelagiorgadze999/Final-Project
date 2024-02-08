@@ -1,3 +1,6 @@
+.active {
+  color: #ffffff;
+}
 header {
   padding: 33px 0;
   background-color: #1c1e53;
@@ -71,7 +74,6 @@ header {
         }
         @media (max-width: 670px) {
           font-size: 25px;
-          
         }
       }
       p {
@@ -577,6 +579,210 @@ footer {
     a,
     p {
       @include mytheme(#282938, 16px, 500, 28px);
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////
+/// about us style////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
+.about_s-1 {
+  padding-top: 128px;
+  .container {
+    @extend %responsivecontainer;
+    p {
+      @include mytheme(#282938, 16px, 400, 28px);
+      opacity: 0.7;
+    }
+    h5 {
+      @include mytheme(#282938, 18px, 400, 32px);
+    }
+    .text-img {
+      @include myflex(row, space-between, center);
+      margin-bottom: 128px;
+      gap: 30px;
+      @media (max-width: 980px) {
+        flex-direction: column;
+      }
+      .solve_problems {
+        width: 40%;
+        @media (max-width: 980px) {
+          width: 100%;
+        }
+        h5 {
+          margin-bottom: 8px;
+        }
+        h1 {
+          @include mytheme(#282938, 54px, 600, 74px);
+          margin-bottom: 36px;
+          @media (max-width: 1100px) {
+            font-size: 30px;
+            line-height: 40px;
+          }
+        }
+      }
+      img {
+        @media (max-width: 980px) {
+          width: 100%;
+        }
+      }
+    }
+    .who {
+      h3 {
+        @include mytheme(#282938, 36px, 600, 40px);
+        margin-bottom: 16px;
+        @media (max-width: 1300px) {
+          font-size: 30px;
+        }
+        @media (max-width: 600px) {
+          font-size: 25px;
+          line-height: 25px;
+        }
+      }
+    }
+    .who {
+      .goal-improvement {
+        @include myflex(row, space-around, flex-end);
+        gap: 30px;
+        padding: 80px 0;
+        background-color: #f4f5f5;
+        @media (max-width: 980px) {
+          flex-direction: column;
+          align-items: center;
+        }
+        .goal-card {
+          width: 35%;
+          @media (max-width: 980px) {
+            width: 90%;
+          }
+          h5 {
+            margin-bottom: 4px;
+          }
+        }
+        .improvement-card {
+          width: 35%;
+          @media (max-width: 980px) {
+            width: 90%;
+          }
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .process {
+      padding-top: 128px;
+      padding-bottom: 152px;
+      @include myflex(column, space-between, center);
+      gap: 48px;
+      h2 {
+        @include mytheme(#282938, 48px, 600, 64px);
+        margin-bottom: 8px;
+        @media (max-width: 625px) {
+          font-size: 30px;
+          line-height: 30px;
+        }
+        @media (max-width: 400px) {
+          font-size: 20px;
+        }
+      }
+      .process-cards {
+        width: 100%;
+        @include myflex(row, space-between, center);
+        flex-wrap: wrap;
+        gap: 20px;
+        div {
+          width: 270px;
+          @media (max-width: 625px) {
+            width: 100%;
+          }
+          h4 {
+            @include mytheme(#282938, 24px, 500, 36px);
+          }
+          .svg-flex {
+            @include myflex(row, flex-start, center);
+            margin-bottom: 32px;
+            gap: 8px;
+            &:last-child {
+              @media (max-width: 625px) {
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.about_s-2 {
+  padding-bottom: 128px;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, flex-start, center);
+    h1 {
+      @include mytheme(#282938, 48px, 600, 64px);
+      margin-bottom: 55px;
+      text-align: center;
+      @media (max-width: 625px) {
+        font-size: 30px;
+        line-height: 30px;
+      }
+    }
+    .benefit-cards {
+      @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 48px;
+      @media (max-width: 1210px) {
+        justify-content: space-around;
+      }
+      div {
+        background-color: #f4f6fc;
+        padding: 40px 10px 30px 30px;
+        width: 350px;
+        border-radius: 15px;
+        @include myflex(column, flex-start, flex-start);
+        @media (max-width: 800px) {
+          width: 100%;
+        }
+
+        svg {
+          margin-bottom: 26px;
+        }
+        h4 {
+          margin-bottom: 12px;
+          @include mytheme(#282938, 24px, 400, 36px);
+        }
+        p {
+          @include mytheme(#282938, 16px, 400, 28px);
+          opacity: 0.7;
+        }
+      }
+    }
+    .icons {
+      width: 100%;
+      @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+      gap: 15px;
+      @media (max-width: 1080px) {
+        justify-content: center;
+      }
+      .text {
+        @include myflex(column, flex-start, flex-start);
+        .number {
+          @include mytheme(#282938, 38px, 600, 56px);
+        }
+        .users {
+          @include mytheme(#282938, 16px, 400, 28px);
+          opacity: 0.7;
+        }
+      }
+      svg {
+        opacity: 0.7;
+      }
     }
   }
 }
