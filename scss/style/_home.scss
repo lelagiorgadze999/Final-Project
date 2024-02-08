@@ -55,7 +55,6 @@ header {
     .text-div {
       width: 480px;
       @media (max-width: 1250px) {
-        // width: 638px;
         width: 90%;
       }
       @media (max-width: 1100px) {
@@ -66,17 +65,22 @@ header {
         @include mytheme(#ffffff, 54px, 600, 74px);
         margin-bottom: 24px;
         @media (max-width: 1100px) {
-          font-size: 40px;
+          font-size: 32px;
           line-height: 50px;
+          text-align: center;
         }
         @media (max-width: 670px) {
-          font-size: 30px;
+          font-size: 25px;
+          
         }
       }
       p {
         @include mytheme(#fff, 16px, 400, 28px);
         margin-bottom: 48px;
         opacity: 0.7;
+        @media (max-width: 670px) {
+          text-align: center;
+        }
       }
       .btn-a {
         @include myflex(row, space-between, center);
@@ -430,6 +434,149 @@ header {
           @include mytheme(#282938, 16px, 400, 28px);
         }
       }
+    }
+  }
+}
+.s-5 {
+  background-color: #f4f6fc;
+  padding: 100px 0;
+  .container {
+    @extend %responsivecontainer;
+
+    .mission,
+    .vision {
+      @include myflex(row, space-between, center);
+      @media (max-width: 990px) {
+        @include myflex(column, center, center);
+        gap: 25px;
+      }
+      h5 {
+        @include mytheme(#282938, 16px, 500, 28px);
+      }
+      h2 {
+        @include mytheme(#282938, 38px, 600, 56px);
+        @media (max-width: 990px) {
+          font-size: 25px;
+          line-height: 25px;
+        }
+      }
+      p {
+        @include mytheme(#282938, 16px, 400, 28px);
+        opacity: 0.7;
+      }
+      .text {
+        @include myflex(column, flex-start, flex-start);
+        width: 40%;
+        gap: 16px;
+        @media (max-width: 990px) {
+          width: 100%;
+        }
+        @media (max-width: 360px) {
+          align-items: center;
+          text-align: center;
+        }
+      }
+      img {
+        border-radius: 15px;
+        @media (max-width: 990px) {
+          width: 80%;
+        }
+      }
+    }
+    .vision {
+      img {
+        order: -1;
+        @media (max-width: 990px) {
+          order: 1;
+        }
+      }
+    }
+    .mission {
+      margin-bottom: 60px;
+    }
+  }
+}
+footer {
+  padding-top: 104px;
+  background-color: #1c1e53;
+  .container {
+    @extend %responsivecontainer;
+    .logo-talk {
+      @include myflex(row, space-between, flex-start);
+      @media (max-width: 750px) {
+        justify-content: center;
+      }
+      // gap: 300px;
+      h2 {
+        @include mytheme(#fff, 48px, 60, 64px);
+        margin-bottom: 14px;
+      }
+      p {
+        @include mytheme(#fff, 16px, 500, 28px);
+        opacity: 0.8;
+      }
+      .discuss {
+        width: 30%;
+        @media (max-width: 750px) {
+          display: none;
+        }
+        svg {
+          margin-bottom: 24px;
+        }
+      }
+      .talk {
+        width: 350px;
+        margin-right: 15%;
+        margin-bottom: 20px;
+        @media (max-width: 1080px) {
+          margin-right: 0;
+        }
+        .icons {
+          margin-top: 28px;
+          width: 145px;
+          @include myflex(row, space-between, center);
+        }
+      }
+    }
+    .footer-contact {
+      background-color: #fcd980;
+      padding: 18px 16px;
+      width: 517px;
+      @include myflex(row, space-around, center);
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+      @media (max-width: 425px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      h5 {
+        @include mytheme(#282938, 18px, 500, 32px);
+        margin-bottom: 1px;
+      }
+      a {
+        @include mytheme(#282938, 16px, 400, 28px);
+      }
+    }
+  }
+}
+.copyright {
+  padding: 32px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, center);
+    nav {
+      width: 500px;
+      @media (max-width: 1080px) {
+        display: none;
+      }
+      ul {
+        @include myflex(row, space-between, center);
+      }
+    }
+    a,
+    p {
+      @include mytheme(#282938, 16px, 500, 28px);
     }
   }
 }
