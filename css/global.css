@@ -1704,10 +1704,6 @@ footer .container .footer-contact a {
   }
 }
 
-header li a {
-  text-decoration: none;
-}
-
-.copyright li a {
+.container a {
   text-decoration: none;
 }/*# sourceMappingURL=global.css.map */
