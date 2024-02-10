@@ -1702,4 +1702,12 @@ footer .container .footer-contact a {
   .s-accordion .mycontainer .accordion {
     width: 100%;
   }
+}
+
+header li a {
+  text-decoration: none;
+}
+
+.copyright li a {
+  text-decoration: none;
 }/*# sourceMappingURL=global.css.map */
