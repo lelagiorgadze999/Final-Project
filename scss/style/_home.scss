@@ -1,3 +1,6 @@
+// font link//
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
 .active {
   color: #ffffff;
 }
@@ -727,7 +730,7 @@ footer {
       text-align: center;
       @media (max-width: 625px) {
         font-size: 30px;
-        line-height: 30px;
+        line-height: 35px;
       }
     }
     .benefit-cards {
@@ -764,9 +767,9 @@ footer {
     }
     .icons {
       width: 100%;
-      @include myflex(row, space-between, center);
+      @include myflex(row, center, center);
       flex-wrap: wrap;
-      gap: 15px;
+      gap: 70px;
       @media (max-width: 1080px) {
         justify-content: center;
       }
@@ -782,6 +785,254 @@ footer {
       }
       svg {
         opacity: 0.7;
+      }
+    }
+  }
+}
+.about_s-3 {
+  background-color: #f4f6fc;
+  padding: 128px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, space-between, center);
+    gap: 48px;
+    h2 {
+      @include mytheme(#282938, 48px, 600, 64px);
+      @media (max-width: 650px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
+    }
+    .team-box {
+      @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+      gap: 30px;
+      width: 100%;
+      @media (max-width: 1320px) {
+        justify-content: space-around;
+      }
+      .member-card {
+        background-color: #fff;
+        width: 290px;
+        text-align: center;
+        padding: 48px 50px 32px 64px;
+        @include myflex(column, center, center);
+
+        @media (max-width: 800px) {
+          justify-content: center;
+          width: 90%;
+        }
+        h4 {
+          @include mytheme(#1d2130, 24px, 400, 36px);
+          margin-top: 30px;
+          margin-bottom: 2px;
+          @media (max-width: 400px) {
+            font-size: 20px;
+          }
+        }
+        span {
+          @include mytheme(#1d2130, 16px, 400, 28px);
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////
+////Pricing style///////////////////////
+
+.pricing_s-1 {
+  padding: 128px 0;
+  .mycontainer {
+    @extend %responsivecontainer;
+    .title-box {
+      @include myflex(column, center, center);
+      margin-bottom: 64px;
+      h1 {
+        @include mytheme(#282938, 48px, 600, 64px);
+        margin-bottom: 16px;
+        text-align: center;
+        @media (max-width: 650px) {
+          font-size: 30px;
+          line-height: 30px;
+        }
+      }
+      p {
+        @include mytheme(#282938, 16px, 500, 28px);
+        width: 560px;
+        @media (max-width: 650px) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .price-cards {
+      @include myflex(row, center, center);
+      flex-wrap: wrap;
+      gap: 30px;
+      @media (max-width: 1310px) {
+        justify-content: space-around;
+      }
+      .card-first,
+      .card-second,
+      .card-third {
+        background-color: #f4f6fc;
+        border-radius: 12px;
+        width: 400px;
+        padding: 64px 60px 62px 48px;
+        .price-number {
+          @include myflex(row, flex-start, center);
+          gap: 8px;
+          margin-bottom: 20px;
+          :first-child {
+            @include mytheme(#282938, 38px, 600, 56px);
+            margin-bottom: 8px;
+            @media (max-width: 490px) {
+              font-size: 25px;
+              line-height: 30px;
+            }
+          }
+          :last-child {
+            @include mytheme(#2405f2, 16px, 400, 28px);
+          }
+        }
+        h2 {
+          margin-bottom: 8px;
+          @include mytheme(#282938, 24px, 400, 36px);
+          @media (max-width: 440px) {
+            text-align: center;
+          }
+        }
+        p {
+          width: 280px;
+          @include mytheme(#282938, 16px, 400, 28px);
+          @media (max-width: 650px) {
+            width: 100%;
+          }
+          @media (max-width: 440px) {
+            text-align: center;
+          }
+        }
+        .benefit {
+          @include myflex(column, space-between, flex-start);
+          gap: 20px;
+          div {
+            @include myflex(row, flex-start, center);
+            gap: 12px;
+            @media (max-width: 490px) {
+              gap: 8px;
+            }
+          }
+          p {
+            @media (max-width: 440px) {
+              font-size: 12px;
+            }
+          }
+        }
+
+        button {
+          @include mytheme(#f4f6fc, 18px, 600, 32px);
+          margin-top: 79px;
+          border: none;
+          border-radius: 41px;
+          padding: 15px 51px;
+          background-color: #282938;
+          text-align: center;
+          margin-left: 28px;
+          @media (max-width: 440px) {
+            padding: 15px 20px;
+            font-size: 12px;
+            width: 100%;
+            margin-left: 0px;
+          }
+        }
+        @media (max-width: 490px) {
+          width: 100%;
+          padding: 30px;
+        }
+      }
+      .card-first > p {
+        margin-bottom: 78px;
+      }
+      .card-second {
+        background-color: #1c1e53;
+        span,
+        h2,
+        p {
+          color: white;
+        }
+        .price-number {
+          :first-child {
+            color: white;
+          }
+          :last-child {
+            color: #fcd980;
+          }
+        }
+        button {
+          background-color: #fcd980;
+          color: #ffffff;
+        }
+      }
+    }
+    .card-second > p {
+      margin-bottom: 50px;
+    }
+    .card-second > button {
+      background-color: #fcd980;
+      color: #282938;
+    }
+    .card-third > p {
+      margin-bottom: 44px;
+    }
+    .card-third > button {
+      margin-top: 65px;
+    }
+  }
+}
+
+.s-accordion {
+  padding-bottom: 128px;
+  .mycontainer {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, flex-start);
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    gap: 20px;
+    .title {
+      width: 425px;
+      @media (max-width: 1200px) {
+        width: 100%;
+        text-align: center;
+      }
+      h1 {
+        @include mytheme(#282938, 48px, 600, 64px);
+        margin-bottom: 16px;
+        @media (max-width: 700px) {
+          font-size: 30px;
+          line-height: 30px;
+        }
+      }
+      a {
+        @include mytheme(#2405f2, 18px, 400, 32px);
+      }
+    }
+    .accordion {
+      width: 800px;
+      button {
+        @include mytheme(#282938, 24px, 400, 36px);
+        @media (max-width: 500px) {
+          font-size: 20px;
+        }
+      }
+      .accordion-body {
+        @include mytheme(#282938, 18px, 500, 32px);
+      }
+      @media (max-width: 900px) {
+        width: 100%;
       }
     }
   }
