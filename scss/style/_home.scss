@@ -1023,7 +1023,7 @@ footer {
     .accordion {
       width: 800px;
       button {
-        @include mytheme(#282938, 24px, 400, 36px);
+        @include mytheme(#282938, 22px, 400, 36px);
         @media (max-width: 500px) {
           font-size: 20px;
         }
