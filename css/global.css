@@ -1669,6 +1669,7 @@ footer .container .footer-contact a {
   }
 }
 .s-accordion .mycontainer .title a {
+  text-decoration: none;
   color: #2405f2;
   font-family: "Poppins", sans-serif;
   font-size: 18px;
