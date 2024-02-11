@@ -1,0 +1,1211 @@
+// font link//
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+
+.active {
+  color: #ffffff;
+}
+header {
+  padding: 33px 0;
+  background-color: #1c1e53;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, center);
+    nav {
+      @include myflex(row, space-between, baseline);
+      gap: 48px;
+
+      ul {
+        @include myflex(row, space-between, center);
+        gap: 32px;
+        @media (max-width: 980px) {
+          display: none;
+        }
+        li {
+          a {
+            @include mytheme(#bbbbcb, 16px, 500, 28px);
+          }
+        }
+      }
+      button {
+        border-radius: 41px;
+        border: 2px solid rgba(244, 246, 252, 0.2);
+        background-color: #1c1e53;
+        padding: 16px 48px;
+        @include mytheme(#ffffff, 16px, 500, 28px);
+
+        @media (max-width: 980px) {
+          display: none;
+        }
+      }
+      i {
+        display: none;
+        @media (max-width: 980px) {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+.s-1 {
+  padding-top: 110px;
+  padding-bottom: 128px;
+  background-color: #1c1e53;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, center);
+    @media (max-width: 1100px) {
+      flex-direction: column;
+      gap: 50px;
+    }
+    .text-div {
+      width: 480px;
+      @media (max-width: 1250px) {
+        width: 90%;
+      }
+      @media (max-width: 1100px) {
+        @include myflex(column, center, center);
+      }
+
+      h1 {
+        @include mytheme(#ffffff, 54px, 600, 74px);
+        margin-bottom: 24px;
+        @media (max-width: 1100px) {
+          font-size: 32px;
+          line-height: 50px;
+          text-align: center;
+        }
+        @media (max-width: 670px) {
+          font-size: 25px;
+        }
+      }
+      p {
+        @include mytheme(#fff, 16px, 400, 28px);
+        margin-bottom: 48px;
+        opacity: 0.7;
+        @media (max-width: 670px) {
+          text-align: center;
+        }
+      }
+      .btn-a {
+        @include myflex(row, space-between, center);
+        width: 408px;
+        @media (max-width: 1100px) {
+          justify-content: space-between;
+        }
+        @media (max-width: 480px) {
+          flex-direction: column;
+          width: 100%;
+          gap: 20px;
+        }
+      }
+      button {
+        padding: 16px 56px;
+        border-radius: 41px;
+        background: #fcd980;
+        border: none;
+        @include mytheme(#1b1c2b, 18px, 600, 32px);
+        font-family: "Manrope", sans-serif;
+        @media (max-width: 330px) {
+          padding: 10px 25px;
+          width: 100%;
+        }
+      }
+      a {
+        @include mytheme(#ffffff, 16px, 500, 28px);
+      }
+    }
+
+    img {
+      @media (max-width: 670px) {
+        width: 90%;
+      }
+    }
+  }
+}
+.s-2 {
+  padding-top: 128px;
+  padding-bottom: 129px;
+  background-color: #f4f6fc;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, flex-start);
+    gap: 270px;
+    @media (max-width: 1250px) {
+      gap: 50px;
+    }
+
+    @media (max-width: 1170px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .work-card {
+      width: 300px;
+      @include myflex(column, center, flex-start);
+      gap: 16px;
+      @media (max-width: 330px) {
+        width: 90%;
+      }
+
+      @media (max-width: 1130px) {
+        align-items: center;
+      }
+      h2 {
+        @include mytheme(#282938, 48px, 600, 64px);
+        text-wrap: nowrap;
+        @media (max-width: 330px) {
+          font-size: 30px;
+        }
+      }
+      p {
+        @include mytheme(#282938, 16px, 400, 28px);
+        opacity: 0.7;
+        width: 350px;
+        @media (max-width: 1130px) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+      .link-btn {
+        @include myflex(row, flex-start, center);
+        gap: 15px;
+        a {
+          @include mytheme(#2405f2, 18px, 400, 32px);
+          @media (max-width: 350px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    .card-box {
+      @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+      gap: 48px 30px;
+      width: 530px;
+      // width: 628px;
+      @media (max-width: 1170px) {
+        width: 75%;
+      }
+      @media (max-width: 900px) {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .small-card {
+        width: 250px;
+        // @media (max-width: 1160px) {
+        //   width: 320px;
+        // }
+        @media (max-width: 620px) {
+          text-align: center;
+          width: 100%;
+        }
+        @media (max-width: 330px) {
+          width: 90%;
+        }
+        .img-box {
+          display: inline-block;
+          position: relative;
+          margin-bottom: 16px;
+          img {
+            background-color: #2405f2;
+            border-radius: 8px;
+          }
+          .number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            @include mytheme(#ffffff, 18px, 500, 32px);
+          }
+        }
+        h4 {
+          @include mytheme(#282938, 32px, 500, 48px);
+          @media (max-width: 350px) {
+            font-size: 20px;
+            line-height: 30px;
+          }
+        }
+        p {
+          @include mytheme(#282938, 16px, 400, 28px);
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+.s-3 {
+  padding: 128px 0;
+  background-color: white;
+  .container {
+    @extend %responsivecontainer;
+    @media (max-width: 1000px) {
+      @include myflex(column, center, center);
+    }
+
+    .header-work {
+      @include myflex(row, space-between, center);
+      width: 100%;
+      @media (max-width: 1300px) {
+        justify-content: space-around;
+      }
+      @media (max-width: 500px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+      }
+      h2 {
+        @include mytheme(#282938, 48px, 600, 64px);
+        @media (max-width: 860px) {
+          font-size: 33px;
+          line-height: 35px;
+        }
+        @media (max-width: 435px) {
+          font-size: 20px;
+        }
+      }
+      a {
+        @include mytheme(#282938, 16px, 500, 28px);
+        margin-right: 16px;
+      }
+      margin-bottom: 64px;
+    }
+    // photos style
+
+    .responsive-images {
+      @extend %responsivecontainer;
+      @include myflex(row, space-between, flex-start);
+      gap: 32px;
+      @media (max-width: 1310px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .img-box {
+        background: url(../../images/project-human.svg),
+          lightgray 50% / cover no-repeat;
+        width: 843px;
+        height: 600px;
+        @media (max-width: 850px) {
+          width: 100%;
+          height: 400px;
+          background-size: cover;
+          background-repeat: no-repeat;
+          background-position: center;
+        }
+      }
+      .overlay {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        background: linear-gradient(
+          329deg,
+          #1c1e53 -10.96%,
+          rgba(28, 30, 83, 0.42) 103.96%
+        );
+        width: 50%;
+        height: 100%;
+        .text {
+          margin-bottom: 76px;
+          width: 313px;
+          @media (max-width: 890px) {
+            margin-bottom: 45px;
+            width: 90%;
+          }
+          h3 {
+            @include mytheme(#fff, 24px, 600, 36px);
+            margin-bottom: 16px;
+            @media (max-width: 890px) {
+              font-size: 15px;
+              line-height: 15px;
+            }
+          }
+          p {
+            @include mytheme(#fff, 16px, 400, 28px);
+            margin-bottom: 40px;
+            @media (max-width: 890px) {
+              font-size: 10px;
+              line-height: 15px;
+              margin-bottom: 10px;
+            }
+          }
+          a {
+            @include mytheme(#fcd980, 16px, 500, 28px);
+            @media (max-width: 890px) {
+              font-size: 10px;
+            }
+          }
+        }
+      }
+      .right-img-box {
+        @include myflex(column, space-between, center);
+        @media (max-width: 1310px) {
+          flex-direction: row;
+          align-items: center;
+        }
+        @media (max-width: 850px) {
+          flex-direction: column;
+        }
+        gap: 32px;
+        .small-img-box {
+          background: url(../../images/portfolio-link.svg),
+            lightgray 8.572px -4.045px / 112.875% 102.113% no-repeat;
+          width: 405px;
+          height: 284px;
+          @media (max-width: 500px) {
+            width: 100%;
+            height: 284px;
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+          .small-overlay {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            background: linear-gradient(
+              329deg,
+              #1c1e53 -10.96%,
+              rgba(28, 30, 83, 0.42) 103.96%
+            );
+            width: 100%;
+            height: 100%;
+            .small-text {
+              margin-bottom: 45px;
+              width: 250px;
+              @media (max-width: 500px) {
+                width: 90%;
+              }
+              h3 {
+                @include mytheme(#fff, 24px, 600, 36px);
+                margin-bottom: 10px;
+              }
+              a {
+                @include mytheme(#fcd980, 16px, 500, 28px);
+              }
+            }
+          }
+        }
+        .prayer {
+          @media (max-width: 500px) {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+.s-4 {
+  background-color: #f4f6fc;
+  padding: 128px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, center, center);
+    h6 {
+      @include mytheme(#282938, 16px, 500, 28px);
+    }
+    h2 {
+      @include mytheme(#282938, 18px, 600, 64px);
+      margin-bottom: 47px;
+      @media (max-width: 500px) {
+        line-height: 35px;
+        text-align: center;
+      }
+    }
+    .mycards {
+      @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+      row-gap: 30px;
+
+      @media (max-width: 1300px) {
+        justify-content: space-around;
+      }
+      div {
+        background-color: #fff;
+        border-radius: 10px;
+        // padding: 58px, 32px, 48px, 48px; არ ამუშავდა
+        padding-top: 58px;
+        padding-right: 35px;
+        padding-bottom: 48px;
+        padding-left: 48px;
+        width: 405px;
+        @media (max-width: 930px) {
+          width: 100%;
+          @include myflex(column, space-between, center);
+
+          text-align: center;
+        }
+        @media (max-width: 440px) {
+          padding: 10px;
+        }
+        svg {
+          margin-bottom: 22px;
+        }
+        h3 {
+          @include mytheme(#282938, 24px, 400, 36px);
+          margin-bottom: 12px;
+        }
+        p {
+          @include mytheme(#282938, 16px, 400, 28px);
+        }
+      }
+    }
+  }
+}
+.s-5 {
+  background-color: #f4f6fc;
+  padding: 100px 0;
+  .container {
+    @extend %responsivecontainer;
+
+    .mission,
+    .vision {
+      @include myflex(row, space-between, center);
+      @media (max-width: 990px) {
+        @include myflex(column, center, center);
+        gap: 25px;
+      }
+      h5 {
+        @include mytheme(#282938, 16px, 500, 28px);
+      }
+      h2 {
+        @include mytheme(#282938, 38px, 600, 56px);
+        @media (max-width: 990px) {
+          font-size: 25px;
+          line-height: 25px;
+        }
+      }
+      p {
+        @include mytheme(#282938, 16px, 400, 28px);
+        opacity: 0.7;
+      }
+      .text {
+        @include myflex(column, flex-start, flex-start);
+        width: 40%;
+        gap: 16px;
+        @media (max-width: 990px) {
+          width: 100%;
+        }
+        @media (max-width: 360px) {
+          align-items: center;
+          text-align: center;
+        }
+      }
+      img {
+        border-radius: 15px;
+        @media (max-width: 990px) {
+          width: 80%;
+        }
+      }
+    }
+    .vision {
+      img {
+        order: -1;
+        @media (max-width: 990px) {
+          order: 1;
+        }
+      }
+    }
+    .mission {
+      margin-bottom: 60px;
+    }
+  }
+}
+footer {
+  padding-top: 104px;
+  background-color: #1c1e53;
+  .container {
+    @extend %responsivecontainer;
+    .logo-talk {
+      @include myflex(row, space-between, flex-start);
+      @media (max-width: 750px) {
+        justify-content: center;
+      }
+      // gap: 300px;
+      h2 {
+        @include mytheme(#fff, 48px, 60, 64px);
+        margin-bottom: 14px;
+      }
+      p {
+        @include mytheme(#fff, 16px, 500, 28px);
+        opacity: 0.8;
+      }
+      .discuss {
+        width: 30%;
+        @media (max-width: 750px) {
+          display: none;
+        }
+        svg {
+          margin-bottom: 24px;
+        }
+      }
+      .talk {
+        width: 350px;
+        margin-right: 15%;
+        margin-bottom: 20px;
+        @media (max-width: 1080px) {
+          margin-right: 0;
+        }
+        .icons {
+          margin-top: 28px;
+          width: 145px;
+          @include myflex(row, space-between, center);
+        }
+      }
+    }
+    .footer-contact {
+      background-color: #fcd980;
+      padding: 18px 16px;
+      width: 517px;
+      @include myflex(row, space-around, center);
+      @media (max-width: 600px) {
+        width: 100%;
+      }
+      @media (max-width: 425px) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      h5 {
+        @include mytheme(#282938, 18px, 500, 32px);
+        margin-bottom: 1px;
+      }
+      a {
+        @include mytheme(#282938, 16px, 400, 28px);
+      }
+    }
+  }
+}
+.copyright {
+  padding: 32px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, center);
+    nav {
+      width: 500px;
+      @media (max-width: 1080px) {
+        display: none;
+      }
+      ul {
+        @include myflex(row, space-between, center);
+      }
+    }
+    a,
+    p {
+      @include mytheme(#282938, 16px, 500, 28px);
+    }
+  }
+}
+
+///////////////////////////////////////////////////////////////
+/// about us style////////////////////////////////////////////
+//////////////////////////////////////////////////////////////
+
+.about_s-1 {
+  padding-top: 128px;
+  .container {
+    @extend %responsivecontainer;
+    p {
+      @include mytheme(#282938, 16px, 400, 28px);
+      opacity: 0.7;
+    }
+    h5 {
+      @include mytheme(#282938, 18px, 400, 32px);
+    }
+    .text-img {
+      @include myflex(row, space-between, center);
+      margin-bottom: 128px;
+      gap: 30px;
+      @media (max-width: 980px) {
+        flex-direction: column;
+      }
+      .solve_problems {
+        width: 40%;
+        @media (max-width: 980px) {
+          width: 100%;
+        }
+        h5 {
+          margin-bottom: 8px;
+        }
+        h1 {
+          @include mytheme(#282938, 54px, 600, 74px);
+          margin-bottom: 36px;
+          @media (max-width: 1100px) {
+            font-size: 30px;
+            line-height: 40px;
+          }
+        }
+      }
+      img {
+        @media (max-width: 980px) {
+          width: 100%;
+        }
+      }
+    }
+    .who {
+      h3 {
+        @include mytheme(#282938, 36px, 600, 40px);
+        margin-bottom: 16px;
+        @media (max-width: 1300px) {
+          font-size: 30px;
+        }
+        @media (max-width: 600px) {
+          font-size: 25px;
+          line-height: 25px;
+        }
+      }
+    }
+    .who {
+      .goal-improvement {
+        @include myflex(row, space-around, flex-end);
+        gap: 30px;
+        padding: 80px 0;
+        background-color: #f4f5f5;
+        @media (max-width: 980px) {
+          flex-direction: column;
+          align-items: center;
+        }
+        .goal-card {
+          width: 35%;
+          @media (max-width: 980px) {
+            width: 90%;
+          }
+          h5 {
+            margin-bottom: 4px;
+          }
+        }
+        .improvement-card {
+          width: 35%;
+          @media (max-width: 980px) {
+            width: 90%;
+          }
+        }
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .process {
+      padding-top: 128px;
+      padding-bottom: 152px;
+      @include myflex(column, space-between, center);
+      gap: 48px;
+      h2 {
+        @include mytheme(#282938, 48px, 600, 64px);
+        margin-bottom: 8px;
+        @media (max-width: 625px) {
+          font-size: 30px;
+          line-height: 30px;
+        }
+        @media (max-width: 400px) {
+          font-size: 20px;
+        }
+      }
+      .process-cards {
+        width: 100%;
+        @include myflex(row, space-between, center);
+        flex-wrap: wrap;
+        gap: 20px;
+        div {
+          width: 270px;
+          @media (max-width: 625px) {
+            width: 100%;
+          }
+          h4 {
+            @include mytheme(#282938, 24px, 500, 36px);
+          }
+          .svg-flex {
+            @include myflex(row, flex-start, center);
+            margin-bottom: 32px;
+            gap: 8px;
+            &:last-child {
+              @media (max-width: 625px) {
+                width: 80%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.about_s-2 {
+  padding-bottom: 128px;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, flex-start, center);
+    h1 {
+      @include mytheme(#282938, 48px, 600, 64px);
+      margin-bottom: 55px;
+      text-align: center;
+      @media (max-width: 625px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
+    }
+    .benefit-cards {
+      @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+      gap: 20px;
+      width: 100%;
+      margin-bottom: 48px;
+      @media (max-width: 1210px) {
+        justify-content: space-around;
+      }
+      div {
+        background-color: #f4f6fc;
+        padding: 40px 10px 30px 30px;
+        width: 350px;
+        border-radius: 15px;
+        @include myflex(column, flex-start, flex-start);
+        @media (max-width: 800px) {
+          width: 100%;
+        }
+
+        svg {
+          margin-bottom: 26px;
+        }
+        h4 {
+          margin-bottom: 12px;
+          @include mytheme(#282938, 24px, 400, 36px);
+        }
+        p {
+          @include mytheme(#282938, 16px, 400, 28px);
+          opacity: 0.7;
+        }
+      }
+    }
+    .icons {
+      width: 100%;
+      @include myflex(row, center, center);
+      flex-wrap: wrap;
+      gap: 70px;
+      @media (max-width: 1080px) {
+        justify-content: center;
+      }
+      .text {
+        @include myflex(column, flex-start, flex-start);
+        .number {
+          @include mytheme(#282938, 38px, 600, 56px);
+        }
+        .users {
+          @include mytheme(#282938, 16px, 400, 28px);
+          opacity: 0.7;
+        }
+      }
+      svg {
+        opacity: 0.7;
+      }
+    }
+  }
+}
+.about_s-3 {
+  background-color: #f4f6fc;
+  padding: 128px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, space-between, center);
+    gap: 48px;
+    h2 {
+      @include mytheme(#282938, 48px, 600, 64px);
+      @media (max-width: 650px) {
+        font-size: 30px;
+        line-height: 35px;
+      }
+    }
+    .team-box {
+      @include myflex(row, space-between, center);
+      flex-wrap: wrap;
+
+      width: 100%;
+      @media (max-width: 1320px) {
+        width: 80%;
+        gap: 80px;
+        justify-content: space-around;
+      }
+      @media (max-width: 930px) {
+        width: 100%;
+      }
+      .member-card {
+        background-color: #fff;
+        width: 290px;
+        text-align: center;
+        padding: 48px 50px 32px 64px;
+        @include myflex(column, center, center);
+
+        @media (max-width: 800px) {
+          justify-content: center;
+          width: 90%;
+        }
+        h4 {
+          @include mytheme(#1d2130, 24px, 400, 36px);
+          margin-top: 30px;
+          margin-bottom: 2px;
+          @media (max-width: 400px) {
+            font-size: 20px;
+          }
+        }
+        span {
+          @include mytheme(#1d2130, 16px, 400, 28px);
+          opacity: 0.7;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////////////////
+////Pricing style///////////////////////
+
+.pricing_s-1 {
+  padding: 128px 0;
+  .mycontainer {
+    @extend %responsivecontainer;
+    .title-box {
+      @include myflex(column, center, center);
+      margin-bottom: 64px;
+      h1 {
+        @include mytheme(#282938, 48px, 600, 64px);
+        margin-bottom: 16px;
+        text-align: center;
+        @media (max-width: 650px) {
+          font-size: 30px;
+          line-height: 30px;
+        }
+      }
+      p {
+        @include mytheme(#282938, 16px, 500, 28px);
+        width: 560px;
+        @media (max-width: 650px) {
+          width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    .price-cards {
+      @include myflex(row, center, center);
+      flex-wrap: wrap;
+      gap: 30px;
+      @media (max-width: 1310px) {
+        justify-content: space-around;
+      }
+      .card-first,
+      .card-second,
+      .card-third {
+        background-color: #f4f6fc;
+        border-radius: 12px;
+        width: 400px;
+        padding: 64px 60px 62px 48px;
+        .price-number {
+          @include myflex(row, flex-start, center);
+          gap: 8px;
+          margin-bottom: 20px;
+          :first-child {
+            @include mytheme(#282938, 38px, 600, 56px);
+            margin-bottom: 8px;
+            @media (max-width: 490px) {
+              font-size: 25px;
+              line-height: 30px;
+            }
+          }
+          :last-child {
+            @include mytheme(#2405f2, 16px, 400, 28px);
+          }
+        }
+        h2 {
+          margin-bottom: 8px;
+          @include mytheme(#282938, 24px, 400, 36px);
+          @media (max-width: 440px) {
+            text-align: center;
+          }
+        }
+        p {
+          width: 280px;
+          @include mytheme(#282938, 16px, 400, 28px);
+          @media (max-width: 650px) {
+            width: 100%;
+          }
+          @media (max-width: 440px) {
+            text-align: center;
+          }
+        }
+        .benefit {
+          @include myflex(column, space-between, flex-start);
+          gap: 20px;
+          div {
+            @include myflex(row, flex-start, center);
+            gap: 12px;
+            @media (max-width: 490px) {
+              gap: 8px;
+            }
+          }
+          p {
+            @media (max-width: 440px) {
+              font-size: 12px;
+            }
+          }
+        }
+
+        button {
+          @include mytheme(#f4f6fc, 18px, 600, 32px);
+          margin-top: 79px;
+          border: none;
+          border-radius: 41px;
+          padding: 15px 51px;
+          background-color: #282938;
+          text-align: center;
+          margin-left: 28px;
+          @media (max-width: 440px) {
+            padding: 15px 20px;
+            font-size: 12px;
+            width: 100%;
+            margin-left: 0px;
+          }
+        }
+        @media (max-width: 930px) {
+          width: 65%;
+          padding-left: 80px;
+        }
+        @media (max-width: 700px) {
+          width: 400px;
+          padding-left: 48px;
+        }
+        @media (max-width: 490px) {
+          width: 100%;
+          padding: 30px;
+        }
+      }
+      .card-first > p {
+        margin-bottom: 78px;
+      }
+      .card-second {
+        background-color: #1c1e53;
+        span,
+        h2,
+        p {
+          color: white;
+        }
+        .price-number {
+          :first-child {
+            color: white;
+          }
+          :last-child {
+            color: #fcd980;
+          }
+        }
+        button {
+          background-color: #fcd980;
+          color: #ffffff;
+        }
+      }
+    }
+    .card-second > p {
+      margin-bottom: 50px;
+    }
+    .card-second > button {
+      background-color: #fcd980;
+      color: #282938;
+    }
+    .card-third > p {
+      margin-bottom: 44px;
+    }
+    .card-third > button {
+      margin-top: 65px;
+    }
+  }
+}
+/////////////////////////////////
+/// ///accordion style
+///
+.s-accordion {
+  padding: 128px 0;
+  .mycontainer {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, flex-start);
+    @media (max-width: 1200px) {
+      flex-direction: column;
+      align-items: center;
+    }
+    gap: 20px;
+    .title {
+      width: 425px;
+      @media (max-width: 1200px) {
+        width: 100%;
+        text-align: center;
+      }
+      h1 {
+        @include mytheme(#282938, 48px, 600, 64px);
+        margin-bottom: 16px;
+        @media (max-width: 700px) {
+          font-size: 30px;
+          line-height: 30px;
+        }
+      }
+      a {
+        text-decoration: none;
+        @include mytheme(#2405f2, 18px, 400, 32px);
+      }
+    }
+    .accordion {
+      width: 800px;
+      button {
+        @include mytheme(#282938, 22px, 400, 36px);
+        @media (max-width: 500px) {
+          font-size: 20px;
+        }
+      }
+      .accordion-body {
+        @include mytheme(#282938, 18px, 500, 32px);
+      }
+      @media (max-width: 900px) {
+        width: 100%;
+      }
+    }
+  }
+}
+//////////////////////////////
+// boostrap underline reset
+
+.container {
+  a {
+    text-decoration: none;
+  }
+}
+//////////////////////////////////
+
+.features_s-1 {
+  padding: 128px 0;
+  background-color: #1c1e53;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, center);
+    flex-wrap: wrap;
+    gap: 30px;
+    @media (max-width: 1300px) {
+      justify-content: center;
+      align-items: center;
+    }
+    .text {
+      width: 450px;
+      @include myflex(column, space-between, flex-start);
+      gap: 32px;
+      @media (max-width: 1060px) {
+        width: 75%;
+        align-items: center;
+        text-align: center;
+      }
+      h1 {
+        @include mytheme(#fff, 54px, 600, 74px);
+        @media (max-width: 1030px) {
+          width: 320px;
+          font-size: 40px;
+          line-height: 40px;
+        }
+        @media (max-width: 370px) {
+          width: 100%;
+          font-size: 25px;
+        }
+      }
+      p {
+        @include mytheme(#fff, 16px, 500, 28px);
+        opacity: 0.7;
+        width: 550px;
+        @media (max-width: 1300px) {
+          width: 100%;
+        }
+      }
+      button {
+        @include mytheme(#282938, 18px, 600, 32px);
+        padding: 16px 48px;
+        border-radius: 41px;
+        background: #fcd980;
+        border: none;
+        font-family: "Manrope", sans-serif;
+        @media (max-width: 330px) {
+          padding: 10px 25px;
+          width: 100%;
+        }
+      }
+    }
+    img {
+      @media (max-width: 1300px) {
+        width: 50%;
+      }
+      @media (max-width: 1060px) {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.features_s-2 {
+  padding-top: 128px;
+  .container {
+    @extend %responsivecontainer;
+    .text-img {
+      padding: 128px 0;
+      @include myflex(row, space-between, center);
+      gap: 30px;
+      margin-bottom: 128px;
+      @media (max-width: 900px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 0;
+      }
+      .text-div {
+        @include myflex(column, center, flex-start);
+        width: 542.5px;
+        gap: 16px;
+        @media (max-width: 900px) {
+          width: 100%;
+        }
+        h5 {
+          @include mytheme(#000, 18px, 500, 32px);
+          @media (max-width: 450px) {
+            font-size: 12px;
+          }
+        }
+        h2 {
+          @include mytheme(#232536, 36px, 600, 56px);
+          @media (max-width: 1200px) {
+            font-size: 25px;
+            line-height: 30px;
+          }
+          @media (max-width: 900px) {
+            font-size: 36px;
+            line-height: 50px;
+          }
+          @media (max-width: 450px) {
+            font-size: 25px;
+            line-height: 30px;
+          }
+        }
+        p {
+          @include mytheme(#282938, 16px, 400, 28px);
+        }
+      }
+      img {
+        @media (max-width: 1200px) {
+          width: 400px;
+        }
+        @media (max-width: 900px) {
+          width: 100%;
+        }
+      }
+    }
+    .second,
+    .fourth {
+      order: -1;
+      @media (max-width: 900px) {
+        order: 1;
+      }
+    }
+    .grey-bg {
+      background: var(--Grey, #f4f6fc);
+    }
+    .orange-bg {
+      background: rgba(252, 217, 128, 0.1);
+      background-size: cover;
+    }
+  }
+}
