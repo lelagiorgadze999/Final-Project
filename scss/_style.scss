@@ -1209,3 +1209,102 @@ footer {
     }
   }
 }
+
+//////////////////////////
+/// //// Blog style
+///
+.blog_s-1 {
+  padding: 128px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, center, center);
+    text-align: center;
+    h2 {
+      @include mytheme(#282938, 48px, 600, 64px);
+      width: 900px;
+      margin-bottom: 16px;
+      @media (max-width: 1000px) {
+        width: 100%;
+        font-size: 30px;
+        line-height: 35px;
+      }
+      @media (max-width: 600px) {
+        font-size: 20px;
+        line-height: 30px;
+      }
+    }
+    span {
+      @include mytheme(#282938, 16px, 500, 28px);
+      margin-bottom: 32px;
+    }
+    img {
+      width: 100%;
+      margin-bottom: 48px;
+    }
+    p {
+      @include mytheme(#282938, 16px, 400, 28px);
+      width: 831px;
+      opacity: 0.7;
+      margin-bottom: 16px;
+      @media (max-width: 1000px) {
+        width: 100%;
+        line-height: 25px;
+      }
+    }
+    a {
+      @include mytheme(#2405f2, 16px, 400, 28px);
+      opacity: 0.7;
+    }
+  }
+}
+
+.blog_s-2 {
+  padding-bottom: 128px;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, space-between, center);
+    gap: 48px;
+    h2 {
+      @include mytheme(#282938, 48px, 600, 64px);
+    }
+    .card-box {
+      width: 100%;
+      @include myflex(row, space-around, center);
+      flex-wrap: wrap;
+      gap: 64px 32px;
+      .card {
+        width: 405px;
+        @media (max-width: 940px) {
+          width: 600px;
+        }
+        @media (max-width: 660px) {
+          width: 100%;
+        }
+        img {
+          width: 100%;
+        }
+        span {
+          @include mytheme(#282938, 16px, 500, 28px);
+          opacity: 0.7;
+          margin-top: 32px;
+          margin-bottom: 16px;
+        }
+        h6 {
+          @include mytheme(#282938, 24px, 400, 36px);
+          margin-bottom: 16px
+        }
+        p {
+          @include mytheme(#282938, 16px, 400, 28px);
+          opacity: 0.7;
+          margin-bottom: 24px
+        }
+        .link {
+          a {
+            @include mytheme(#1c1e53, 16px, 500, 28px);
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+  }
+}
