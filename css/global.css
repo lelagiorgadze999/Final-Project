@@ -1845,7 +1845,7 @@ footer .container .footer-contact a {
   padding-top: 128px;
 }
 .features_s-2 .container .text-img {
-  padding: 128px 0;
+  padding: 128px 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -1857,7 +1857,7 @@ footer .container .footer-contact a {
   .features_s-2 .container .text-img {
     flex-direction: column;
     align-items: flex-start;
-    padding: 50px 0;
+    padding: 50px 20px;
   }
 }
 .features_s-2 .container .text-img .text-div {
