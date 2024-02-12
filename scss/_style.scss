@@ -1291,12 +1291,12 @@ footer {
         }
         h6 {
           @include mytheme(#282938, 24px, 400, 36px);
-          margin-bottom: 16px
+          margin-bottom: 16px;
         }
         p {
           @include mytheme(#282938, 16px, 400, 28px);
           opacity: 0.7;
-          margin-bottom: 24px
+          margin-bottom: 24px;
         }
         .link {
           a {
@@ -1304,6 +1304,108 @@ footer {
             margin-right: 12px;
           }
         }
+      }
+    }
+  }
+}
+
+//////////////////////////
+/// //// contact
+.contact_main {
+  padding: 128px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, center, center);
+    h2 {
+      @include mytheme(#282938, 48px, 600, 64px);
+      margin-bottom: 16px;
+      text-align: center;
+      @media (max-width: 400px) {
+        font-size: 30px;
+      }
+    }
+    p {
+      @include mytheme(#282938, 16px, 400, 28px);
+      margin-bottom: 46px;
+      width: 562px;
+      text-align: center;
+      @media (max-width: 660px) {
+        width: 100%;
+      }
+    }
+    .myform {
+      padding: 55px 76px 69px 74px;
+      border-radius: 12px;
+      background: var(--Grey, #f4f6fc);
+      width: 1061px;
+      @media (max-width: 1120px) {
+        width: 100%;
+      }
+      @media (max-width: 440px) {
+        padding: 55px 30px 69px 28px;
+      }
+
+      .small-input {
+        @include myflex(row, space-between, center);
+        gap: 32px;
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+        .label-input {
+          @include myflex(column, flex-start, flex-start);
+          gap: 6px;
+          width: 438px;
+          @media (max-width: 1120px) {
+            width: 300px;
+          }
+          @media (max-width: 870px) {
+            width: 100%;
+          }
+          label {
+            @include mytheme(#000, 18px, 400, 32px);
+          }
+          input {
+            width: 100%;
+            padding: 18px 32px;
+            border-radius: 8px;
+            border: 1px solid rgba(0, 0, 0, 0.12);
+            outline: none;
+            @include mytheme(#000, 18px, 300, 28px);
+            &::placeholder {
+              @include mytheme(#000, 18px, 400, 28px);
+            }
+          }
+        }
+      }
+      .text_area-box {
+        @include myflex(column, flex-start, flex-start);
+        width: 100%;
+        gap: 6px;
+        margin-bottom: 32px;
+        label {
+          @include mytheme(#000, 18px, 400, 32px);
+        }
+        textarea {
+          width: 100%;
+          height: 138px;
+          border-radius: 8px;
+          border: 1px solid rgba(0, 0, 0, 0.12);
+          @include mytheme(#000, 18px, 300, 28px);
+          padding: 18px 32px;
+          &::placeholder {
+            @include mytheme(#000, 18px, 200, 28px);
+          }
+        }
+      }
+      .btn {
+        border-radius: 41px;
+        background: var(--Dark-blue, #282938);
+        @include myflex(row, center, center);
+        padding: 15px 51px;
+        gap: 10px;
+        flex-shrink: 0;
+        @include mytheme(var(--Grey, #f4f6fc), 18px, 600, 32px);
+        font-family: Manrope;
+        cursor: pointer;
       }
     }
   }
