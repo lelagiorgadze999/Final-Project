@@ -580,7 +580,7 @@ header .container nav i {
   }
 }
 .s-3 .container .responsive-images .img-box {
-  background: url(../../images/project-human.svg), lightgray 50%/cover no-repeat;
+  background: url(../images/project-human.svg), lightgray 50%/cover no-repeat;
   width: 843px;
   height: 600px;
 }
@@ -671,7 +671,7 @@ header .container nav i {
   }
 }
 .s-3 .container .responsive-images .right-img-box .small-img-box {
-  background: url(../../images/portfolio-link.svg), lightgray 8.572px -4.045px/112.875% 102.113% no-repeat;
+  background: url(../images/portfolio-link.svg), lightgray 8.572px -4.045px/112.875% 102.113% no-repeat;
   width: 405px;
   height: 284px;
 }
