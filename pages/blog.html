@@ -23,7 +23,7 @@
             <li style="display: none"><a href="#">FAQ</a></li>
             <li><a href="./blog.html">Blog</a></li>
           </ul>
-          <button>Contact us</button>
+          <button onclick="openContactPage()">Contact us</button>
           <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff"></i>
         </nav>
       </div>
@@ -413,15 +413,20 @@
         <p>Copyright 2021, Finsweet.com</p>
         <nav>
           <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">About us</a></li>
-            <li><a href="">Features</a></li>
-            <li><a href="">Pricing</a></li>
-            <li><a href="">FAQ</a></li>
-            <li><a href="">Blog</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="/pages/about.html">About us</a></li>
+            <li><a href="/pages/features.html">Features</a></li>
+            <li><a href="/pages/pricing.html">Pricing</a></li>
+            <li style="display: none;"><a href="#">FAQ</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
           </ul>
         </nav>
       </div>
     </section>
+    <script>
+      function openContactPage() {
+        window.location.href = "contact.html";
+      }
+    </script>
   </body>
 </html>
