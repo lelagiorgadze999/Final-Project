@@ -13,19 +13,30 @@
   <body>
     <header>
       <div class="container">
-        <img src="../images/Logo.svg" alt="logo image" />
+        <a href="../index.html"><img src="../images/Logo.svg" alt="logo image" /></a>
         <nav>
           <ul>
             <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About us</a></li>
-            <li><a href="./features.html">Features</a></li>
-            <li><a href="./pricing.html">Pricing</a></li>
-            <li style="display: none"><a href="#">FAQ</a></li>
-            <li><a href="./blog.html">Blog</a></li>
+            <li><a class="active" href="#">About us</a></li>
+            <li><a href="/pages/features.html">Features</a></li>
+            <li><a href="/pages/pricing.html">Pricing</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
           </ul>
           <button onclick="openContactPage()">Contact us</button>
-          <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff"></i>
+          <a class="menu-toggle" onclick="toggleMenu()"
+            ><i class="fa-solid fa-bars fa-2xl" style="color: #ffffff"></i
+          ></a>
         </nav>
+        <div class="mobile-menu">
+          <ul>
+            <li><a class="active-mobile" href="../index.html">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="/pages/features.html">Features</a></li>
+            <li><a href="/pages/pricing.html">Pricing</a></li>
+            <li><a href="/pages/blog.html">Blog</a></li>
+          </ul>
+          <button onclick="openContactPage()">Contact us</button>
+        </div>
       </div>
     </header>
     <section class="about_s-1">
@@ -728,11 +739,11 @@
         <p>Copyright 2021, Finsweet.com</p>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="/pages/about.html">About us</a></li>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="#">About us</a></li>
             <li><a href="/pages/features.html">Features</a></li>
             <li><a href="/pages/pricing.html">Pricing</a></li>
-            <li style="display: none;"><a href="#">FAQ</a></li>
+            <li style="display: none"><a href="#">FAQ</a></li>
             <li><a href="/pages/blog.html">Blog</a></li>
           </ul>
         </nav>
@@ -741,6 +752,13 @@
     <script>
       function openContactPage() {
         window.location.href = "contact.html";
+      }
+    </script>
+    <script>
+      function toggleMenu() {
+        var mobileMenu = document.querySelector(".mobile-menu");
+        mobileMenu.style.display =
+          mobileMenu.style.display === "block" ? "none" : "block";
       }
     </script>
   </body>

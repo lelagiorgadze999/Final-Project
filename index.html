@@ -19,7 +19,7 @@
   <body>
     <header>
       <div class="container">
-        <img src="./images/Logo.svg" alt="logo image" />
+        <a href="./index.html"><img src="./images/Logo.svg" alt="logo image" /></a>
         <nav>
           <ul>
             <li><a class="active" href="#">Home</a></li>
@@ -30,9 +30,22 @@
             <li><a href="#FAQ">FAQ</a></li>
           </ul>
           <button onclick="openContactPage()">Contact us</button>
-          <i class="fa-solid fa-bars fa-2xl" style="color: #ffffff"></i>
-        </nav>
+          <a class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars fa-2xl" style="color: #ffffff"></i></a>
+           
+        </nav>  
+        <div  class="mobile-menu">
+          <ul>
+            <li><a class="active-mobile" href="#">Home</a></li>
+            <li><a href="./pages/about.html">About us</a></li>
+            <li><a href="./pages/features.html">Features</a></li>
+            <li><a href="./pages/pricing.html">Pricing</a></li>
+            <li><a href="./pages/blog.html">Blog</a></li>
+            <li><a href="#FAQ">FAQ</a></li>
+          </ul>
+          <button onclick="openContactPage()">Contact us</button>
+        </div> 
       </div>
+     
     </header>
     <section class="s-1">
       <div class="container">
@@ -785,7 +798,7 @@
             <li><a href="./pages/about.html">About us</a></li>
             <li><a href="./pages/features.html">Features</a></li>
             <li><a href="./pages/pricing.html">Pricing</a></li>
-            <li style="display: none;"><a href="#">FAQ</a></li>
+            <li style="display: none"><a href="#">FAQ</a></li>
             <li><a href="./pages/blog.html">Blog</a></li>
           </ul>
         </nav>
@@ -800,6 +813,14 @@
       function openContactPage() {
         window.location.href = "pages/contact.html";
       }
+    </script>
+    <!-- mobile menu  -->
+    <script>
+     function toggleMenu() {
+  var mobileMenu = document.querySelector('.mobile-menu');
+  mobileMenu.style.display = (mobileMenu.style.display === 'block') ? 'none' : 'block';
+}
+
     </script>
   </body>
 </html>

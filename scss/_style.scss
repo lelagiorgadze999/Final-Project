@@ -23,6 +23,13 @@ header {
         li {
           a {
             @include mytheme(#bbbbcb, 16px, 500, 28px);
+            &:hover {
+              color: #fcd980;
+              transition: color 1s;
+            }
+          }
+          .active {
+            color: #ffffff;
           }
         }
       }
@@ -33,15 +40,65 @@ header {
         padding: 16px 48px;
         @include mytheme(#ffffff, 16px, 500, 28px);
         cursor: pointer;
+        &:hover {
+          background-color: #fcd980;
+          transition: background-color 1s;
+        }
         @media (max-width: 980px) {
           display: none;
         }
       }
-      i {
+      .menu-toggle {
         display: none;
         @media (max-width: 980px) {
           display: flex;
         }
+      }
+    }
+
+    .mobile-menu {
+      display: none;
+      position: absolute;
+      top: 91px;
+      right: 0;
+      background-color: #1c1e53;
+      padding: 20px;
+      width: 350px;
+      height: 565px;
+      z-index: 3;
+      box-shadow: 1px 127px 103px -99px rgba(252, 217, 128, 0.79) inset;
+      -webkit-box-shadow: 1px 127px 103px -99px rgba(252, 217, 128, 0.79) inset;
+      -moz-box-shadow: 1px 127px 103px -99px rgba(252, 217, 128, 0.79) inset;
+      transition: display 2s ease-in;
+      ul {
+        list-style-type: none;
+        padding: 0;
+        @include myflex(column, center, center);
+        gap: 30px;
+        .active-mobile {
+          color: #fcd980;
+        }
+        li {
+          margin-bottom: 10px;
+          a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 25px;
+          }
+        }
+      }
+      @media (max-width: 980px) {
+        // display: block;
+      }
+      button {
+        border-radius: 41px;
+        border: 2px solid rgba(244, 246, 252, 0.2);
+        background-color: #fcd980;
+        padding: 16px 48px;
+        @include mytheme(#1b1c2b, 16px, 500, 28px);
+        cursor: pointer;
+        margin-left: 60px;
+        margin-top: 20px;
       }
     }
   }
@@ -106,6 +163,10 @@ header {
         border: none;
         @include mytheme(#1b1c2b, 18px, 600, 32px);
         font-family: "Manrope", sans-serif;
+        &:hover {
+          background-color: #FDE4A6;
+          transition: background-color 1s;
+        }
         @media (max-width: 330px) {
           padding: 10px 25px;
           width: 100%;
@@ -1121,6 +1182,11 @@ footer {
         background: #fcd980;
         border: none;
         font-family: "Manrope", sans-serif;
+        cursor: pointer;
+        &:hover {
+          background-color: #FDE4A6;
+          transition: background-color 1s;
+        }
         @media (max-width: 330px) {
           padding: 10px 25px;
           width: 100%;
