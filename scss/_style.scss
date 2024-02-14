@@ -164,7 +164,7 @@ header {
         @include mytheme(#1b1c2b, 18px, 600, 32px);
         font-family: "Manrope", sans-serif;
         &:hover {
-          background-color: #FDE4A6;
+          background-color: #fde4a6;
           transition: background-color 1s;
         }
         @media (max-width: 330px) {
@@ -1184,7 +1184,7 @@ footer {
         font-family: "Manrope", sans-serif;
         cursor: pointer;
         &:hover {
-          background-color: #FDE4A6;
+          background-color: #fde4a6;
           transition: background-color 1s;
         }
         @media (max-width: 330px) {

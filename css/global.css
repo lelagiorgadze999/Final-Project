@@ -387,7 +387,7 @@ header .container .mobile-menu button {
   font-family: "Manrope", sans-serif;
 }
 .s-1 .container .text-div button:hover {
-  background-color: #FDE4A6;
+  background-color: #fde4a6;
   transition: background-color 1s;
 }
 @media (max-width: 330px) {
@@ -1891,7 +1891,7 @@ footer .container .footer-contact a {
   cursor: pointer;
 }
 .features_s-1 .container .text button:hover {
-  background-color: #FDE4A6;
+  background-color: #fde4a6;
   transition: background-color 1s;
 }
 @media (max-width: 330px) {
