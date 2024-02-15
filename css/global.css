@@ -146,19 +146,19 @@ html {
   scroll-behavior: smooth;
 }
 
-.contact_main .container, .blog_s-2 .container, .blog_s-1 .container, .features_s-2 .container, .features_s-1 .container, .s-accordion .mycontainer, .pricing_s-1 .mycontainer, .about_s-3 .container, .about_s-2 .container, .about_s-1 .container, .copyright .container, footer .container, .s-5 .container, .s-4 .container, .s-3 .container .responsive-images, .s-3 .container, .s-2 .container, .s-1 .container, header .container {
+.privacy .container, .contact_main .container, .blog_s-2 .container, .blog_s-1 .container, .features_s-2 .container, .features_s-1 .container, .s-accordion .mycontainer, .pricing_s-1 .mycontainer, .about_s-3 .container, .about_s-2 .container, .about_s-1 .container, .copyright .container, footer .container, .s-5 .container, .s-4 .container, .s-3 .container .responsive-images, .s-3 .container, .s-2 .container, .s-1 .container, header .container {
   max-width: 1280px;
   width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1300px) {
-  .contact_main .container, .blog_s-2 .container, .blog_s-1 .container, .features_s-2 .container, .features_s-1 .container, .s-accordion .mycontainer, .pricing_s-1 .mycontainer, .about_s-3 .container, .about_s-2 .container, .about_s-1 .container, .copyright .container, footer .container, .s-5 .container, .s-4 .container, .s-3 .container .responsive-images, .s-3 .container, .s-2 .container, .s-1 .container, header .container {
+  .privacy .container, .contact_main .container, .blog_s-2 .container, .blog_s-1 .container, .features_s-2 .container, .features_s-1 .container, .s-accordion .mycontainer, .pricing_s-1 .mycontainer, .about_s-3 .container, .about_s-2 .container, .about_s-1 .container, .copyright .container, footer .container, .s-5 .container, .s-4 .container, .s-3 .container .responsive-images, .s-3 .container, .s-2 .container, .s-1 .container, header .container {
     width: 90%;
   }
 }
 @media (max-width: 440px) {
-  .contact_main .container, .blog_s-2 .container, .blog_s-1 .container, .features_s-2 .container, .features_s-1 .container, .s-accordion .mycontainer, .pricing_s-1 .mycontainer, .about_s-3 .container, .about_s-2 .container, .about_s-1 .container, .copyright .container, footer .container, .s-5 .container, .s-4 .container, .s-3 .container .responsive-images, .s-3 .container, .s-2 .container, .s-1 .container, header .container {
-    width: 80%;
+  .privacy .container, .contact_main .container, .blog_s-2 .container, .blog_s-1 .container, .features_s-2 .container, .features_s-1 .container, .s-accordion .mycontainer, .pricing_s-1 .mycontainer, .about_s-3 .container, .about_s-2 .container, .about_s-1 .container, .copyright .container, footer .container, .s-5 .container, .s-4 .container, .s-3 .container .responsive-images, .s-3 .container, .s-2 .container, .s-1 .container, header .container {
+    width: 90%;
   }
 }
 
@@ -223,7 +223,7 @@ header .container nav button {
 }
 header .container nav button:hover {
   background-color: #fcd980;
-  transition: background-color 1s;
+  transition: background-color 1s ease-in;
 }
 @media (max-width: 980px) {
   header .container nav button {
@@ -244,14 +244,18 @@ header .container .mobile-menu {
   top: 91px;
   right: 0;
   background-color: #1c1e53;
-  padding: 20px;
-  width: 350px;
-  height: 565px;
+  padding: 30px 200px;
+  width: 100%;
+  height: 100vh;
   z-index: 3;
   box-shadow: 1px 127px 103px -99px rgba(252, 217, 128, 0.79) inset;
   -webkit-box-shadow: 1px 127px 103px -99px rgba(252, 217, 128, 0.79) inset;
   -moz-box-shadow: 1px 127px 103px -99px rgba(252, 217, 128, 0.79) inset;
-  transition: display 2s ease-in;
+}
+@media (max-width: 600px) {
+  header .container .mobile-menu {
+    padding: 20px;
+  }
 }
 header .container .mobile-menu ul {
   list-style-type: none;
@@ -284,8 +288,13 @@ header .container .mobile-menu button {
   font-weight: 500;
   line-height: 28px;
   cursor: pointer;
-  margin-left: 60px;
-  margin-top: 20px;
+  margin: 20px auto;
+  width: 100%;
+  cursor: pointer;
+}
+header .container .mobile-menu button:hover {
+  background-color: #fcd980;
+  transition: background-color 1s ease-in;
 }
 
 .s-1 {
@@ -403,6 +412,14 @@ header .container .mobile-menu button {
   font-weight: 500;
   line-height: 28px;
 }
+.s-1 .container .text-div a:hover {
+  color: #fcd980;
+  transition: color 1s;
+}
+.s-1 .container .text-div svg :hover {
+  fill: #fcd980;
+  cursor: pointer;
+}
 @media (max-width: 670px) {
   .s-1 .container img {
     width: 90%;
@@ -492,8 +509,11 @@ header .container .mobile-menu button {
   font-weight: 400;
   line-height: 32px;
 }
+.s-2 .container .work-card .link-btn a:hover {
+  color: #1c1e53;
+}
 @media (max-width: 350px) {
-  .s-2 .container .work-card .link-btn a {
+  .s-2 .container .work-card .link-btn a:hover {
     font-size: 14px;
   }
 }
@@ -1089,13 +1109,21 @@ footer .container .footer-contact a {
   justify-content: space-between;
   align-items: center;
 }
-.copyright .container a,
-.copyright .container p {
+.copyright .container nav a:hover {
+  color: #585858;
+  transition: color 1s;
+  text-decoration: underline;
+}
+.copyright .container a {
   color: #282938;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 28px;
+}
+.copyright .container a:hover {
+  color: #585858;
+  transition: color 1s;
 }
 
 .about_s-1 {
@@ -1447,6 +1475,12 @@ footer .container .footer-contact a {
   justify-content: center;
   align-items: center;
 }
+.about_s-3 .container .team-box .member-card:hover {
+  cursor: pointer;
+  background-color: #fcd980;
+  width: 320px;
+  transition: width 1s ease-in-out;
+}
 @media (max-width: 800px) {
   .about_s-3 .container .team-box .member-card {
     justify-content: center;
@@ -1661,6 +1695,13 @@ footer .container .footer-contact a {
   background-color: #282938;
   text-align: center;
   margin-left: 28px;
+  cursor: pointer;
+}
+.pricing_s-1 .mycontainer .price-cards .card-first button:hover,
+.pricing_s-1 .mycontainer .price-cards .card-second button:hover,
+.pricing_s-1 .mycontainer .price-cards .card-third button:hover {
+  background-color: #535460;
+  transition: background-color 5s;
 }
 @media (max-width: 440px) {
   .pricing_s-1 .mycontainer .price-cards .card-first button,
@@ -1716,6 +1757,9 @@ footer .container .footer-contact a {
 .pricing_s-1 .mycontainer .price-cards .card-second button {
   background-color: #fcd980;
   color: #ffffff;
+}
+.pricing_s-1 .mycontainer .price-cards .card-second button:hover {
+  background-color: #fde4a6;
 }
 .pricing_s-1 .mycontainer .card-second > p {
   margin-bottom: 50px;
@@ -1777,6 +1821,10 @@ footer .container .footer-contact a {
   font-size: 18px;
   font-weight: 400;
   line-height: 32px;
+}
+.s-accordion .mycontainer .title a:hover {
+  color: #1c1e53;
+  transition: color 1s;
 }
 .s-accordion .mycontainer .accordion {
   width: 800px;
@@ -2161,6 +2209,9 @@ footer .container .footer-contact a {
   line-height: 28px;
   margin-right: 12px;
 }
+.blog_s-2 .container .card-box .card .link a:hover {
+  color: #585858;
+}
 
 .contact_main {
   padding: 128px 0;
@@ -2303,6 +2354,7 @@ footer .container .footer-contact a {
   font-weight: 300;
   line-height: 28px;
   padding: 18px 32px;
+  resize: none;
 }
 .contact_main .container .myform .text_area-box textarea::-moz-placeholder {
   color: #000;
@@ -2327,6 +2379,7 @@ footer .container .footer-contact a {
   align-items: center;
   padding: 15px 51px;
   gap: 10px;
+  border: none;
   flex-shrink: 0;
   color: var(--Grey, #f4f6fc);
   font-family: "Poppins", sans-serif;
@@ -2335,4 +2388,70 @@ footer .container .footer-contact a {
   line-height: 32px;
   font-family: Manrope;
   cursor: pointer;
+}
+.contact_main .container .myform .btn:hover {
+  background-color: #535460;
+  transition: background-color 2s;
+}
+
+.privacy {
+  padding: 128px 0;
+}
+.privacy .container {
+  width: 840px;
+}
+@media (max-width: 950px) {
+  .privacy .container {
+    width: 90%;
+  }
+}
+.privacy .container h2 {
+  color: #282938;
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 64px;
+  margin-bottom: 16px;
+}
+@media (max-width: 650px) {
+  .privacy .container h2 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+.privacy .container h3 {
+  color: #282938;
+  font-family: "Poppins", sans-serif;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 56px;
+  margin-bottom: 32px;
+  margin-top: 40px;
+}
+@media (max-width: 650px) {
+  .privacy .container h3 {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+.privacy .container p,
+.privacy .container li {
+  color: #282938;
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28px;
+  list-style: disc;
+  margin-bottom: 12px;
+  opacity: 0.7;
+}
+.privacy .container span {
+  color: #2405F2;
+}
+.privacy .container .title {
+  text-align: center;
+  margin-bottom: 24pxpx;
+}
+.privacy .container ul {
+  margin-left: 20px;
 }/*# sourceMappingURL=global.css.map */
