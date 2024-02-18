@@ -14,7 +14,7 @@
 }
 @mixin template($gradient) {
   width: 623px;
-  @media(max-width:800px){
+  @media (max-width: 800px) {
     width: 100%;
   }
   .img-box {
