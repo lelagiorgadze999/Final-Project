@@ -1,5 +1,6 @@
 // font link//
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
 
 .active {
   color: #ffffff;
@@ -601,7 +602,7 @@ footer {
       @media (max-width: 750px) {
         justify-content: center;
       }
-   
+
       h2 {
         @include mytheme(#fff, 48px, 60, 64px);
         margin-bottom: 14px;
@@ -617,6 +618,7 @@ footer {
         }
         svg {
           margin-bottom: 24px;
+          cursor: pointer;
         }
       }
       .talk {
@@ -676,9 +678,9 @@ footer {
         text-decoration: underline;
       }
     }
-    a{
+    a {
       @include mytheme(#282938, 16px, 500, 28px);
-      &:hover{
+      &:hover {
         color: #585858;
         transition: color 1s;
       }
@@ -1527,6 +1529,9 @@ footer {
           background-color: #535460;
           transition: background-color 2s;
         }
+        @media(max-width:300px){
+          padding: 15px 26px;
+        }
       }
     }
   }
@@ -1547,7 +1552,7 @@ footer {
     h2 {
       @include mytheme(#282938, 48px, 600, 64px);
       margin-bottom: 16px;
-      @media(max-width:650px){
+      @media (max-width: 650px) {
         font-size: 30px;
         line-height: 30px;
       }
@@ -1556,7 +1561,7 @@ footer {
       @include mytheme(#282938, 38px, 600, 56px);
       margin-bottom: 32px;
       margin-top: 40px;
-      @media(max-width:650px){
+      @media (max-width: 650px) {
         font-size: 20px;
         line-height: 25px;
       }
@@ -1569,7 +1574,7 @@ footer {
       opacity: 0.7;
     }
     span {
-      color: #2405F2;
+      color: #2405f2;
     }
     .title {
       text-align: center;
@@ -1577,6 +1582,138 @@ footer {
     }
     ul {
       margin-left: 20px;
+    }
+  }
+}
+
+///////////////////
+/// Work  page style
+.work_s-1 {
+  background: var(--Grey, #f4f6fc);
+  padding: 96px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, center, center);
+    h5 {
+      @include mytheme(#282938, 16px, 500, 28px);
+      margin-bottom: 4px;
+      opacity: 0.7;
+    }
+    h2 {
+      @include mytheme(#282938, 48px, 600, 64px);
+      margin-bottom: 24px;
+      @media (max-width: 800px) {
+        font-size: 30px;
+        line-height: 30px;
+      }
+      @media (max-width: 360px) {
+        font-size: 25px;
+      }
+    }
+    p {
+      @include mytheme(#282938, 16px, 500, 28px);
+      width: 730px;
+      text-align: center;
+      margin-bottom: 32px;
+      opacity: 0.7;
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+    }
+    .svg-box {
+      @include myflex(row, space-between, center);
+      gap: 27.8px;
+      svg {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.work_s-2 {
+  padding: 96px 0 128px 0;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(row, space-between, center);
+    flex-wrap: wrap;
+    row-gap: 64px;
+    @media (max-width: 1300px) {
+      justify-content: center;
+    }
+    .template-1 {
+      @include template(
+        linear-gradient(131deg, #f4ede1 16.74%, #98b1c6 103.17%)
+      );
+    }
+    .template-2 {
+      @include template(
+        linear-gradient(131deg, #ffd3af 16.74%, #4f56ff 103.17%)
+      );
+    }
+    .template-3 {
+      @include template(
+        linear-gradient(131deg, #eebca7 16.74%, #c8c8c8 103.17%)
+      );
+    }
+    .template-4 {
+      @include template(
+        linear-gradient(131deg, #c2e7f2 16.74%, #98a4ff 103.17%)
+      );
+    }
+    .template-5 {
+      @include template(
+        linear-gradient(131deg, #c5bcff 16.74%, #9bf6d5 103.17%)
+      );
+    }
+    .template-6 {
+      @include template(
+        linear-gradient(131deg, #d2d6fd 16.74%, #d6acea 103.17%)
+      );
+    }
+  }
+}
+.work_s-3 {
+  margin-bottom: 128px;
+  .container {
+    @extend %responsivecontainer;
+    @include myflex(column, center, center);
+    h2 {
+      @include mytheme(#282938, 48px, 600, 64px);
+      margin-bottom: 20px;
+      width: 730px;
+      text-align: center;
+      @media (max-width: 800px) {
+        width: 100%;
+        font-size: 30px;
+        line-height: 30px;
+      }
+      @media (max-width: 360px) {
+        font-size: 25px;
+      }
+    }
+    p {
+      @include mytheme(#282938, 16px, 400, 28px);
+      width: 560px;
+      text-align: center;
+      margin-bottom: 40px;
+      opacity: 0.7;
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+    }
+    button {
+      border: none;
+      border-radius: 41px;
+      background: #fcd980;
+      padding: 16px 67px 16px 66px;
+      @include myflex(row, center, center);
+      @include mytheme(#1b1c2b, 18px, 600, 32px);
+      font-family: "Manrope", sans-serif;
+      cursor: pointer;
+      &:hover {
+        background-color: #fde4a6;
+        transition: background-color 2s;
+      }
     }
   }
 }

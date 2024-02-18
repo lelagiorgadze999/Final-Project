@@ -12,3 +12,43 @@
   font-weight: $font-weight;
   line-height: $line-height;
 }
+@mixin template($gradient) {
+  width: 623px;
+  @media(max-width:800px){
+    width: 100%;
+  }
+  .img-box {
+    padding: 30px 39px 33px 39px;
+    background: $gradient;
+    margin-bottom: 24px;
+
+    @media (max-width: 800px) {
+      width: 100%;
+    }
+    img {
+      @media (max-width: 800px) {
+        width: 100%;
+      }
+    }
+  }
+  h3 {
+    @include mytheme(#282938, 38px, 600, 56px);
+    margin-bottom: 12px;
+  }
+  p {
+    @include mytheme(#282938, 16px, 400, 28px);
+    margin-bottom: 24px;
+    opacity: 0.7;
+  }
+  .link-box {
+    @include myflex(row, flex-start, center);
+    gap: 16px;
+    a {
+      @include mytheme(#282938, 16px, 500, 24px);
+      &:hover {
+        color: #585858;
+        transition: color 2s;
+      }
+    }
+  }
+}
